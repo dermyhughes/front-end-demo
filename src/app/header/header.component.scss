@@ -9,11 +9,22 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-top: 2.2em;
+        padding-bottom: 1.8em;
+
+        .main-header__logo {
+            max-width: 230px;
+        }
     }
     .main-header__nav,
     .main-header__secondary-nav {
         li {
             display: inline-block;
         }
+    }
+    .main-header__nav > ul > li {
+        color: $text-light;
+        padding: 1em;
+        font-size: 1.1em;
     }
 }
