@@ -1,0 +1,19 @@
+@import "styles";
+
+.main-header {
+    width: 100%;
+    background-color: $brand-green;
+
+    .header-container {
+        padding: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .main-header__nav {
+            li {
+                display: inline-block;
+            }
+        }
+    }
+}
