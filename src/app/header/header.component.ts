@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  nav = ['Latest Updates', 'Support Centre', 'FAQs', 'Contact Us']
+  nav = ['Latest Updates', 'Support Centre', 'FAQs', 'Contact Us'];
+  secondaryNav = ['Business Support & Advice', 'Expert Clincs', 'Webinars'];
 
   constructor() { }
 

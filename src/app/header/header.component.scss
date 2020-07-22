@@ -3,17 +3,17 @@
 .main-header {
     width: 100%;
     background-color: $brand-green;
+    @include content-margin;
 
     .header-container {
-        padding: 48px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-
-        .main-header__nav {
-            li {
-                display: inline-block;
-            }
+    }
+    .main-header__nav,
+    .main-header__secondary-nav {
+        li {
+            display: inline-block;
         }
     }
 }

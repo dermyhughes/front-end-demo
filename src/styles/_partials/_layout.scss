@@ -1,0 +1,8 @@
+// Main Spacing
+$content-padding-left: 14vw;
+$content-padding-right: 14vw;
+
+@mixin content-margin {
+    padding-left: $content-padding-left;
+    padding-right: $content-padding-right;
+}
