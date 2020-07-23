@@ -15,8 +15,9 @@
 #main-container {
 
     .main-bg {
-        background-image: url(../assets/bg-top.svg);
-        background-repeat: no-repeat;
+        background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top, bottom;
 
         .main-content-container {
             position: relative;

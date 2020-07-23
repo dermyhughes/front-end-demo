@@ -1,0 +1,20 @@
+.stepper-content {
+    display: flex;
+    height: 100%;
+
+    .stepper-text {
+        flex: 1;
+    }
+
+    .stepper-content--arrow-left,
+    .stepper-content--arrow-right {
+        align-self: center;
+    }
+
+    .stepper-content--arrow-left {
+        justify-self: flex-end;
+    }
+    .stepper-content--arrow-right {
+        justify-self: flex-start;
+    }
+}
