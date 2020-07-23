@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class PageStepperComponent implements OnInit {
 
   /** Set width of card. Defauts to 300px. */
-  @Input() cardWidth: number = 300;
+  @Input() cardWidth: number = 360;
   /** Set alignment to left or right */ 
   @Input() alignTo: stepperDirection;
   /** Set title of stepper */

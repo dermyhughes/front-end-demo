@@ -3,7 +3,7 @@
         <div *ngIf="alignTo === 'left'" class="stepper-content--arrow-left">
             <i class="arrow-left icofont-arrow-left"></i>
         </div>
-        <div class="stepper-text">
+        <div class="stepper-text" [class.left]="alignTo === 'left'" [class.right]="alignTo === 'right'">
             <span class="stepper-text__sub-header">{{ alignTo === 'left' ? 'Previous' : 'Next' }}</span>
             <span class="stepper-text__header">{{ stepperTitle }}</span>
         </div>
