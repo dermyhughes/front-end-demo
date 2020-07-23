@@ -1,3 +1,5 @@
+@import "styles";
+
 #app-container {
     display: flex;
     flex-direction: column;
@@ -5,8 +7,39 @@
     overflow: hidden;
     align-items: center;
 
-    .main-content {
+    .main-wrapper {
         width: 100vw;
         padding: 0 8vw;
+    }
+}
+
+#main-container {
+
+
+    .main-bg {
+        height: 100vh;
+        background-image: url(../assets/bg-top.svg);
+        background-repeat: no-repeat;
+    }
+
+    .breadcrumb-container {
+        width: 100%;
+        background-color: $background-grey;
+        @include content-margin;
+
+        .breadcrumb {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            font-size: 1.1em;
+
+            .back-title {
+                color: $text-link;
+                font-weight: 600;
+                margin-right: 6vw;
+            }
+            .current-title {
+
+            }
+        }
     }
 }

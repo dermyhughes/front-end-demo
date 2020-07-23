@@ -5,15 +5,15 @@
             <img src="../../assets/logo.png" alt="company logo">
         </div>
 
-        <div class="main-header__nav">
+        <nav class="main-header__nav">
             <ul>
                 <li *ngFor="let item of navbarItems" [class.active]="item.active" (click)="setActive(item)">
                     <a href="{{ item.link }}">{{ item.title }}</a>
                 </li>
-                <img src="../../assets/search.svg" alt="Search Icon" style="width: 18px">
+                <i class="search icofont-search-1"></i>
             </ul>
 
-        </div>
+        </nav>
 
     </div>
 </div>
