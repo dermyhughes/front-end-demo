@@ -1,9 +1,10 @@
 @import "styles";
 
 @mixin stripes {
-    background-color: #375861;
-    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    // background-color: #375861;
+    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctitle%3Estripe%3C/title%3E%3Cpath d='M47.69,35.13l40-40h-20l-20,20m40,20v-20l-20,20' transform='translate(-47.69 4.88)'/%3E%3C/svg%3E");
     background-size: .5em;
+    opacity: 0.6;
 }
 
 .contents-card {

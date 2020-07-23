@@ -5,6 +5,7 @@
         </header>
 
         <main id="main-container">
+
             <section class="breadcrumb-container">
                 <div class="breadcrumb">
                     <span class="back-title"><i class="arrow-left icofont-arrow-left"></i>All 'Business Support &
@@ -14,10 +15,14 @@
             </section>
             <section class="main-bg">
                 <div class="main-content-container">
-                    <div style="display: flex; justify-content: center; padding-top: 3em;">
-                        <app-content-card></app-content-card>
+                    <div class="section-split-wrapper">
+                        <div class="section-left">
+                            <app-content-card></app-content-card>
+                        </div>
+                        <div class="section-right">
+                            <app-body-text></app-body-text>
+                        </div>
                     </div>
-                    <app-body-text></app-body-text>
                 </div>
             </section>
         </main>

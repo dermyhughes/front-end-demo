@@ -1,15 +1,38 @@
-@import 'styles';
+@import "styles";
 
-.bullet-list {
-    list-style: none;
-
-    li::before {
-        content: "\2022";
-        color: $background-blue;
-        font-size: 1.6em;
-        font-weight: bold;
-        display: inline-block;
-        width: 1em;
+.main-content {
+    .main-content__title {
+        font-family: "Roboto Slab";
+        font-size: 3em;
+        color: $brand-green-dark;
+        padding-bottom: 0.5em;
     }
-    
+
+    p {
+        font-family: "Open Sans";
+        padding-bottom: 1.5em;
+
+        &.main-content__top-p {
+            font-size: 1.25em;
+        }
+        &.main-content__bold-p {
+            font-weight: 700;
+        }
+    }
+    .main-content__bullet-list {
+        list-style: none;
+        text-indent: -1.6em;
+        padding-bottom: 1.5em;
+
+        li::before {
+            content: "\2022";
+            color: $background-blue;
+            font-size: 1.6em;
+            font-weight: bold;
+            display: inline-block;
+            width: 0.5em;
+            text-indent: -1em;
+            padding-left: 2em;
+        }
+    }
 }

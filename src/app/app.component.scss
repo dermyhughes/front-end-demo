@@ -17,12 +17,24 @@
     .main-bg {
         background-image: url(../assets/bg-top.svg);
         background-repeat: no-repeat;
-        position: relative;
-        z-index: -1;
 
         .main-content-container {
             position: relative;
             z-index: 0;
+            @include content-margin;
+
+            .section-split-wrapper {
+                display: flex;
+                padding-top: 4em;
+
+                .section-left {
+                    margin-right: 3em;
+                    height: fit-content;
+                }
+                .section-right {
+                    margin-left: 3em;
+                }
+            }
         }
     }
 
