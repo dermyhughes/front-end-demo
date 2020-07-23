@@ -28,10 +28,12 @@
         .main-header__nav {
             font-family: "Raleway";
             letter-spacing: 0.2px;
+            margin-top: 0.5em;
 
             ul > li {
                 padding: 1em;
                 font-size: 1em;
+                position: relative;
 
                 a {
                     color: $text-light;
@@ -44,11 +46,15 @@
                     &::after {
                         content: "";
                         display: block;
-                        position: relative;
+                        position: absolute;
                         height: 2px;
                         width: 60%;
                         background-color: $background-blue;
                         margin: 0.5em auto;
+                        bottom: 0;
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
             }
@@ -71,13 +77,16 @@
 
         .main-header__secondary-nav {
             font-family: 'Source Sans Pro';
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
+            line-height: 2;
 
             ul > li {
-                padding: 1em;
-                font-size: 1.2em;
+                padding: 1em 0;
+                font-size: 1.25em;
                 position: relative;
                 font-weight: 300;
+                padding-left: 0;
+                margin-right: 2em;
 
                 a {
                     color: $text-light;

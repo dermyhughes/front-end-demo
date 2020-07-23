@@ -8,25 +8,7 @@ import { NavbarItem } from './header.interface';
 })
 export class HeaderComponent implements OnInit {
 
-  navbarItems: NavbarItem[]  = [
-    {
-      title: 'Latest Updates',
-      link: '#'
-    },
-    {
-      title: 'Support Centre',
-      link: '#',
-      active: true
-    },
-    {
-      title: 'FAQs',
-      link: '#'
-    },
-    {
-      title: 'Contact Us',
-      link: '#'
-    },
-  ];
+  navbarItems: NavbarItem[];
   secondaryNavbarItems: NavbarItem[] = [
     {
       title: 'Business Support & Advice',
@@ -46,6 +28,30 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.navbarItems = [
+      {
+        title: 'Latest Updates',
+        link: '#'
+      },
+      {
+        title: 'Support Centre',
+        link: '#',
+        active: true
+      },
+      {
+        title: 'FAQs',
+        link: '#'
+      },
+      {
+        title: 'Contact Us',
+        link: '#'
+      },
+    ];
+  }
+
+  setActive(item: NavbarItem) {
+    item.active = !item.active;
+
   }
 
 }
