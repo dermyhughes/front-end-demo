@@ -1,5 +1,5 @@
-<header class="main-header">
-    <div class="header-container">
+<div class="main-header">
+    <div class="header-container-primary">
 
         <div class="main-header__logo">
             <img src="../../assets/logo.png" alt="company logo">
@@ -7,20 +7,24 @@
 
         <div class="main-header__nav">
             <ul>
-                <li *ngFor="let item of nav">
-                    {{ item }}
+                <li *ngFor="let item of navbarItems" [class.active]="item.active">
+                    <a href="{{ item.link }}">{{ item.title }}</a>
                 </li>
-                <img src="../../assets/search.svg" alt="" style="width: 18px">
+                <img src="../../assets/search.svg" alt="Search Icon" style="width: 18px">
             </ul>
 
         </div>
 
     </div>
-    <div class="main-header__secondary-nav">
-        <ul>
-            <li *ngFor="let item of secondaryNav">
-                {{ item }}
-            </li>
-        </ul>
+</div>
+<div class="secondary-header">
+    <div class="header-container-secondary">
+        <div class="main-header__secondary-nav">
+            <ul>
+                <li *ngFor="let item of secondaryNavbarItems" [class.active]="item.active">
+                    <a href="{{ item.link }}">{{ item.title }}</a>
+                </li>
+            </ul>
+        </div>
     </div>
-</header>
+</div>

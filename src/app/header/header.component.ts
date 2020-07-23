@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavbarItem } from './header.interface';
 
 @Component({
   selector: 'app-header',
@@ -7,8 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  nav = ['Latest Updates', 'Support Centre', 'FAQs', 'Contact Us'];
-  secondaryNav = ['Business Support & Advice', 'Expert Clincs', 'Webinars'];
+  navbarItems: NavbarItem[]  = [
+    {
+      title: 'Latest Updates',
+      link: '#'
+    },
+    {
+      title: 'Support Centre',
+      link: '#',
+      active: true
+    },
+    {
+      title: 'FAQs',
+      link: '#'
+    },
+    {
+      title: 'Contact Us',
+      link: '#'
+    },
+  ];
+  secondaryNavbarItems: NavbarItem[] = [
+    {
+      title: 'Business Support & Advice',
+      link: '#',
+      active: true
+    },
+    {
+      title: 'Expert Clincs',
+      link: '#'
+    },
+    {
+      title: 'Webinars',
+      link: '#'
+    }
+  ];
 
   constructor() { }
 

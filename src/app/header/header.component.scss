@@ -1,30 +1,105 @@
 @import "styles";
 
-.main-header {
+.main-header,
+.secondary-header {
     width: 100%;
-    background-color: $brand-green;
     @include content-margin;
+}
 
-    .header-container {
+.main-header {
+    background-color: $brand-green;
+
+    .header-container-primary,
+    .header-container-secondary {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-top: 2.2em;
+    }
+
+    .header-container-primary {
+        background-color: $brand-green;
+        padding-top: 2.5em;
         padding-bottom: 1.8em;
 
         .main-header__logo {
             max-width: 230px;
         }
-    }
-    .main-header__nav,
-    .main-header__secondary-nav {
-        li {
-            display: inline-block;
+
+        .main-header__nav {
+            font-family: "Raleway";
+            letter-spacing: 0.2px;
+
+            ul > li {
+                padding: 1em;
+                font-size: 1em;
+
+                a {
+                    color: $text-light;
+                    text-decoration: none;
+                }
+
+                &.active {
+                    font-weight: 600;
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        position: relative;
+                        height: 2px;
+                        width: 60%;
+                        background-color: $background-blue;
+                        margin: 0.5em auto;
+                    }
+                }
+            }
         }
     }
-    .main-header__nav > ul > li {
-        color: $text-light;
-        padding: 1em;
-        font-size: 1.1em;
+}
+
+.main-header__nav,
+.main-header__secondary-nav {
+    li {
+        display: inline-block;
+    }
+}
+
+.secondary-header {
+    background-color: $brand-green-dark;
+
+    .header-container-secondary {
+        background-color: $brand-green-dark;
+
+        .main-header__secondary-nav {
+            font-family: 'Source Sans Pro';
+            letter-spacing: 0.2px;
+
+            ul > li {
+                padding: 1em;
+                font-size: 1.2em;
+                position: relative;
+                font-weight: 300;
+
+                a {
+                    color: $text-light;
+                    text-decoration: none;
+                }
+
+                &.active {
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        height: 4px;
+                        width: 100%;
+                        background-color: $background-blue;
+                        margin: 0.5em auto;
+                        margin-bottom: 0;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
     }
 }
