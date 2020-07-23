@@ -1,0 +1,15 @@
+@import 'styles';
+
+.bullet-list {
+    list-style: none;
+
+    li::before {
+        content: "\2022";
+        color: $background-blue;
+        font-size: 1.6em;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+    }
+    
+}

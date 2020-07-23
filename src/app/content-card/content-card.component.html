@@ -1,0 +1,13 @@
+<div class="contents-card">
+    <div class="contents-card__top">
+        <h2 class="contents-card__title">Contents</h2>
+        <hr>
+    </div>
+    <div class="contents-card__content">
+        <ul>
+            <li *ngFor="let item of contentItems" [class.active]="item.active" [class.strong]="item.strong">
+                <a href="{{ item.link }}">{{ item.title }}</a>
+            </li>
+        </ul>
+    </div>
+</div>

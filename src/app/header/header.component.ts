@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavbarItem } from './header.interface';
+import { NavbarItem } from '../models/header.interface';
 
 @Component({
   selector: 'app-header',
