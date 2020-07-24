@@ -49,9 +49,22 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
-  setActive(item: NavbarItem) {
+  setPrimaryActive(item: NavbarItem) {
+    this.navbarItems.map(item => {
+      if (item.active) {
+        item.active = false;
+      }
+    })
     item.active = !item.active;
+  }
 
+  setSecondaryActive(item: NavbarItem) {
+    this.secondaryNavbarItems.map(item => {
+      if (item.active) {
+        item.active = false;
+      }
+    })
+    item.active = !item.active;
   }
 
 }
