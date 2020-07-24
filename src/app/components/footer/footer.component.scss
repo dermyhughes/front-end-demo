@@ -37,6 +37,8 @@
         }
 
         .footer-cards__social-link {
+            justify-self: center;
+            
             .social-link {
                 height: 2em;
                 width: 2em;
@@ -46,7 +48,7 @@
                 margin-right: 1em;
                 text-decoration: none;
 
-                .icon{
+                .icon {
                     color: $text-grey;
                     font-size: 1.4em;
                 }
@@ -57,9 +59,15 @@
             background-color: $background-grey-blue;
             border-radius: 20px;
             padding: 1.8em;
+            display: block;
 
-            span > * {
+            span {
                 display: inline-block;
+                padding-bottom: 1.5em;
+
+                > * {
+                    display: inline;
+                }
             }
             .icon {
                 padding-right: 0.5em;
