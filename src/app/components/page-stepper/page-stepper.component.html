@@ -1,13 +1,18 @@
-<div class="card" [style.width.px]="cardWidth">
+<div class="card"
+     [style.width.px]="cardWidth">
     <div class="stepper-content">
-        <div *ngIf="alignTo === 'left'" class="stepper-content--arrow-left">
+        <div *ngIf="alignTo === 'left'"
+             class="stepper-content--arrow-left">
             <i class="arrow-left icofont-arrow-left"></i>
         </div>
-        <div class="stepper-text" [class.left]="alignTo === 'left'" [class.right]="alignTo === 'right'">
+        <div class="stepper-text"
+             [class.left]="alignTo === 'left'"
+             [class.right]="alignTo === 'right'">
             <span class="stepper-text__sub-header">{{ alignTo === 'left' ? 'Previous' : 'Next' }}</span>
             <span class="stepper-text__header">{{ stepperTitle }}</span>
         </div>
-        <div *ngIf="alignTo === 'right'" class="stepper-content--arrow-right">
+        <div *ngIf="alignTo === 'right'"
+             class="stepper-content--arrow-right">
             <i class="arrow-right icofont-arrow-right"></i>
         </div>
     </div>

@@ -2,12 +2,15 @@
     <div class="header-container-primary">
 
         <div class="main-header__logo">
-            <img src="../../assets/logo.png" alt="company logo">
+            <img src="../../assets/logo.png"
+                 alt="company logo">
         </div>
 
         <nav class="main-header__nav">
             <ul>
-                <li *ngFor="let item of navbarItems" [class.active]="item.active" (click)="setActive(item)">
+                <li *ngFor="let item of navbarItems"
+                    [class.active]="item.active"
+                    (click)="setActive(item)">
                     <a href="{{ item.link }}">{{ item.title }}</a>
                 </li>
                 <i class="search icofont-search-1"></i>
@@ -21,7 +24,8 @@
     <div class="header-container-secondary">
         <div class="main-header__secondary-nav">
             <ul>
-                <li *ngFor="let item of secondaryNavbarItems" [class.active]="item.active">
+                <li *ngFor="let item of secondaryNavbarItems"
+                    [class.active]="item.active">
                     <a href="{{ item.link }}">{{ item.title }}</a>
                 </li>
             </ul>

@@ -5,7 +5,9 @@
     </div>
     <div class="contents-card__content">
         <ul>
-            <li *ngFor="let item of contentItems" [class.active]="item.active" [class.strong]="item.strong">
+            <li *ngFor="let item of contentItems"
+                [class.active]="item.active"
+                [class.strong]="item.strong">
                 <a href="{{ item.link }}">{{ item.title }}</a>
             </li>
         </ul>

@@ -9,11 +9,15 @@
     .main-wrapper {
         width: 100vw;
         padding: 0 8vw;
+
+        .margin {
+            width: 100%;
+            @include content-margin;
+        }
     }
 }
 
 #main-container {
-
     .main-bg {
         background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg);
         background-repeat: no-repeat, no-repeat;
@@ -22,7 +26,7 @@
         .main-content-container {
             position: relative;
             z-index: 0;
-            @include content-margin;
+            padding-bottom: 4em;
 
             .section-split-wrapper {
                 display: flex;
@@ -39,24 +43,35 @@
         }
     }
 
-    .breadcrumb-container {
-        width: 100%;
+    .breadcrumb-container,
+    .recommended-container {
         background-color: $background-grey;
-        @include content-margin;
+    }
 
+    .breadcrumb-container {
         .breadcrumb {
             padding-top: 1em;
             padding-bottom: 1em;
             font-size: 1.1em;
+
+            a {
+                text-decoration: none;
+            }
+
+            .arrow-left {
+                margin-right: 0.5em;
+            }
 
             .back-title {
                 color: $text-link;
                 font-weight: 600;
                 margin-right: 6vw;
             }
-            .current-title {
-
-            }
         }
     }
+
+    .recommended-container {
+        padding-top: 4em;
+    } 
+
 }

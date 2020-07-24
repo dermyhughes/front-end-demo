@@ -34,11 +34,17 @@
         height: 2em;
         border-radius: 50%;
         background-color: $background-grey;
+        color: $text-link;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: $text-link;
         font-size: 1.2em;
+        cursor: pointer;
+        
+        &:hover {
+            background-color: $background-blue;
+            color: $background-white;
+        }
     }
 
     .stepper-content--arrow-left {

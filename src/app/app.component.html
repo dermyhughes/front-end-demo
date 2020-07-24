@@ -6,27 +6,34 @@
 
         <main id="main-container">
 
-            <section class="breadcrumb-container">
+            <section class="margin breadcrumb-container">
                 <div class="breadcrumb">
-                    <span class="back-title"><i class="arrow-left icofont-arrow-left"></i>All 'Business Support &
-                        Advice'</span>
+                    <a href="#"><span class="back-title"><i class="arrow-left icofont-arrow-left"></i>All 'Business
+                            Support &
+                            Advice'</span></a>
                     <span class="current-title">Finance</span>
                 </div>
             </section>
             <section class="main-bg">
-                <div class="main-content-container">
+                <div class="margin main-content-container">
                     <div class="section-split-wrapper">
-                        <div class="section-left">
+                        <aside class="section-left">
                             <app-content-card></app-content-card>
-                        </div>
+                        </aside>
                         <div class="section-right">
                             <app-body-text></app-body-text>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="main-bg-bottom">
-
+            <section class="margin recommended-container">
+                <h2>Recommended</h2>
+                <ul>
+                    <li *ngFor="post of postCards">
+                        <app-post-card icon="post.icon"
+                                       metaTitle="post.metaTitle"></app-post-card>
+                    </li>
+                </ul>
             </section>
         </main>
 
