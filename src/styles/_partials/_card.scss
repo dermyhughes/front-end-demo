@@ -8,4 +8,8 @@
     background-color: $background-white;
     box-shadow: 15px 15px 40px -20px #8fc7d544;
     position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
 }

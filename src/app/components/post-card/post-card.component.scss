@@ -1,0 +1,41 @@
+@import "styles";
+
+.card {
+    width: 350px;
+}
+
+.post-card-link {
+    text-decoration: none;
+}
+
+.post-card {
+    .post-card__top-meta {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 0.5em;
+
+        .post-card__icon {
+            color: $text-dark;
+            font-size: 1.4em;
+            margin-right: 0.2em;
+        }
+
+        .post-card__meta-title {
+            color: $text-grey;
+            font-weight: 500;
+        }
+    }
+    .post-card__main-title {
+        font-family: "Open Sans";
+        font-size: 1.4em;
+        color: $text-dark;
+        font-weight: 700;
+        line-height: 1.25;
+        margin-bottom: 1em;
+    }
+
+    .post-card__copy {
+        font-family: "Open Sans";
+        color: $text-dark;
+    }
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PostCard } from 'src/app/models/post-card.interface';
 
 @Component({
   selector: 'app-post-card',
@@ -7,15 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostCardComponent implements OnInit {
 
-  /** Post icon in meta title */
-  @Input() icon: string;
-  @Input() metaTitle: string;
-  @Input() mainTitle: string;
-  @Input() postCopy: string;
-
-  constructor() { }
+  @Input() post: PostCard;
 
   ngOnInit(): void {
+    console.log(this.post);
   }
 
 }

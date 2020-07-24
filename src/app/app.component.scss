@@ -36,9 +36,6 @@
                     margin-right: 3em;
                     height: fit-content;
                 }
-                .section-right {
-                    margin-left: 3em;
-                }
             }
         }
     }
@@ -72,6 +69,18 @@
 
     .recommended-container {
         padding-top: 4em;
-    } 
 
+        .recommended-container__title {
+            font-family: "Roboto Slab";
+            font-size: 2em;
+            color: $brand-green-dark;
+            margin-bottom: 1.5em;
+            font-weight: 600;
+        }
+
+        .recommended-container__post-cards {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }

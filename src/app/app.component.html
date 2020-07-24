@@ -9,8 +9,7 @@
             <section class="margin breadcrumb-container">
                 <div class="breadcrumb">
                     <a href="#"><span class="back-title"><i class="arrow-left icofont-arrow-left"></i>All 'Business
-                            Support &
-                            Advice'</span></a>
+                            Support & Advice'</span></a>
                     <span class="current-title">Finance</span>
                 </div>
             </section>
@@ -27,11 +26,10 @@
                 </div>
             </section>
             <section class="margin recommended-container">
-                <h2>Recommended</h2>
-                <ul>
-                    <li *ngFor="post of postCards">
-                        <app-post-card icon="post.icon"
-                                       metaTitle="post.metaTitle"></app-post-card>
+                <h2 class="recommended-container__title">Recommended</h2>
+                <ul class="recommended-container__post-cards">
+                    <li *ngFor="let post of postCards">
+                        <app-post-card [post]="post"></app-post-card>
                     </li>
                 </ul>
             </section>
