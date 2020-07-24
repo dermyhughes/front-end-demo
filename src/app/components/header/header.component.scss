@@ -58,8 +58,12 @@
                     }
                 }
             }
-            .search {
+            .icon {
                 color: $text-light;
+            }
+            .menu {
+                font-size: 2em;
+                cursor: pointer;
             }
         }
     }
@@ -79,7 +83,7 @@
         background-color: $brand-green-dark;
 
         .main-header__secondary-nav {
-            font-family: 'Open Sans';
+            font-family: "Open Sans";
             line-height: 2;
 
             ul > li {
@@ -96,7 +100,6 @@
                 }
 
                 &.active {
-
                     &::after {
                         content: "";
                         display: block;

@@ -6,16 +6,19 @@
                  alt="company logo">
         </div>
 
-        <nav class="main-header__nav">
+        <nav class="main-header__nav"
+             [class.mobile]="innerWidth < 1080">
             <ul>
                 <li *ngFor="let item of navbarItems"
                     [class.active]="item.active"
                     (click)="setPrimaryActive(item)">
                     <a href="{{ item.link }}">{{ item.title }}</a>
                 </li>
-                <i class="search icofont-search-1"></i>
+                <i class="icon search icofont-search-1"></i>
             </ul>
-
+            <i [hidden]="innerWidth >= 1080"
+               (click)="openMenu()"
+               class="icon menu icofont-navigation-menu"></i>
         </nav>
 
     </div>

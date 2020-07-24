@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, AfterViewInit } from '@angular/core';
 import { NavbarItem } from '../../models/header.interface';
+import { EventListenerOptions } from 'rxjs/internal/observable/fromEvent';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
 
   navbarItems: NavbarItem[];
   secondaryNavbarItems: NavbarItem[] = [
@@ -25,9 +26,10 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  innerWidth: number;
 
   ngOnInit(): void {
+
     this.navbarItems = [
       {
         title: 'Latest Updates',
@@ -49,6 +51,17 @@ export class HeaderComponent implements OnInit {
     ];
   }
 
+  ngAfterViewInit() {
+    this.innerWidth = window.innerWidth;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    if (event) {
+      this.innerWidth = event.target.innerWidth;
+    }
+  }
+
   setPrimaryActive(item: NavbarItem) {
     this.navbarItems.map(item => {
       if (item.active) {
@@ -65,6 +78,10 @@ export class HeaderComponent implements OnInit {
       }
     })
     item.active = !item.active;
+  }
+
+  openMenu() {
+    alert('!');
   }
 
 }
