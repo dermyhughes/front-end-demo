@@ -55,6 +55,10 @@
                     color: $text-dark;
                 }
 
+                &:hover {
+                    text-decoration: underline;
+                }
+
                 &.active {
                     a {
                         color: $brand-green;
