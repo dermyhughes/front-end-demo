@@ -29,6 +29,44 @@
             letter-spacing: 0.2px;
             margin-top: 0.5em;
 
+            &.mobile {
+                display: none;
+            }
+
+            &.is-open {
+                display: block;
+                position: absolute;
+                top: 100px;
+                left: 0;
+                right: 0;
+                font-size: 1.8em;
+                background-color: $brand-green;
+                z-index: 9998;
+
+                @include respond-to("sm") {
+                    font-size: 2.2em;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: 1em;
+                    margin-bottom: 2em;
+
+                    li {
+                        padding-top: 0.5em;
+                        padding-bottom: 0.5em;
+
+                        &.active::after {
+                            width: 80%;
+                            height: 8px;
+                            margin-bottom: 0.2em;
+                        }
+                    }
+                }
+            }
+
             ul > li {
                 padding: 1em;
                 font-size: 1em;
@@ -64,12 +102,21 @@
                 font-size: 2em;
                 cursor: pointer;
             }
-            // &.mobile {
-            //     ul {
-            //         display: flex;
-            //         flex-direction: column;
-            //     }
-            // }
+        }
+    }
+
+    .main-header__nav-btn {
+        position: relative;
+        z-index: 9999;
+        margin-left: 1em;
+
+        .icon {
+            color: $text-light;
+            font-size: 2em;
+
+            @include respond-to("sm") {
+                font-size: 3em;
+            }
         }
     }
 }

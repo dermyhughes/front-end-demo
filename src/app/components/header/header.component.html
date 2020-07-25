@@ -7,7 +7,8 @@
         </div>
 
         <nav class="main-header__nav"
-             [class.mobile]="innerWidth < 1080">
+             [class.mobile]="isMobile"
+             [class.is-open]="isOpen && isMobile">
             <ul>
                 <li *ngFor="let item of navbarItems"
                     [class.active]="item.active"
@@ -16,10 +17,12 @@
                 </li>
                 <i class="icon search icofont-search-1"></i>
             </ul>
-            <i [hidden]="innerWidth >= 1080"
-               (click)="openMenu()"
-               class="icon menu icofont-navigation-menu"></i>
         </nav>
+        <div *ngIf="isMobile"
+             class="main-header__nav-btn"
+             (click)="openMenu()">
+            <i class="icon menu icofont-{{ isOpen ? 'ui-close' : 'navigation-menu' }}"></i>
+        </div>
 
     </div>
 </div>

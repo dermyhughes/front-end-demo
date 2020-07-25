@@ -78,6 +78,11 @@ url("./fonts/icofont.woff") format("woff");
   content: "\efa2";
 }
 
+.icofont-ui-close:before
+{
+  content: "\ec4f";
+}
+
 .icofont-xs
 {
   font-size: .5em;

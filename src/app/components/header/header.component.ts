@@ -26,7 +26,12 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     }
   ];
 
+  isMobile: boolean;
+  /** Inner width of window */
   innerWidth: number;
+
+  /** State on mobile menu */
+  isOpen: boolean = false;
 
   ngOnInit(): void {
 
@@ -52,13 +57,21 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.innerWidth = window.innerWidth;
+    if (window.innerWidth < 1080) {
+      this.isMobile = true;
+    }
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     if (event) {
-      this.innerWidth = event.target.innerWidth;
+      const innerWidth = event.target.innerWidth;
+      if (innerWidth < 1080) {
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+      this.innerWidth = innerWidth;
     }
   }
 
@@ -81,7 +94,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   openMenu() {
-    alert('!');
+    this.isOpen = !this.isOpen;
   }
 
 }
