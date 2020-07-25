@@ -6,3 +6,9 @@ $content-padding-right: 14vw;
     padding-left: $content-padding-left;
     padding-right: $content-padding-right;
 }
+
+.margin {
+    max-width: 1600px;
+    margin: 0 auto;
+    @include content-margin;
+}

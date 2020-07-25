@@ -1,22 +1,10 @@
 @import "styles";
 
 #app-container {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
+
 
     .main-wrapper {
-        // width: 100vw;
-        // max-width: 1600px;
-        // box-sizing: content-box;
-        // margin: 0 auto;
-        // padding: 0 8vw;
 
-        .margin {
-            width: 100%;
-            @include content-margin;
-        }
     }
 }
 
@@ -46,13 +34,13 @@
         }
     }
 
-    .breadcrumb-container,
-    .recommended-container {
+    .breadcrumb,
+    .recommended {
         background-color: $background-grey;
     }
 
-    .breadcrumb-container {
-        .breadcrumb {
+    .breadcrumb {
+        .breadcrumb-container {
             padding-top: 1em;
             padding-bottom: 1em;
             font-size: 1.1em;

@@ -6,8 +6,8 @@
 
         <main id="main-container">
 
-            <section class="margin breadcrumb-container">
-                <div class="breadcrumb">
+            <section class="breadcrumb">
+                <div class="margin breadcrumb-container">
                     <a href="#"><span class="back-title"><i class="arrow-left icofont-arrow-left"></i>All 'Business
                             Support & Advice'</span></a>
                     <span class="current-title">Finance</span>
@@ -27,13 +27,15 @@
                 </div>
             </section>
 
-            <section class="margin recommended-container">
-                <h2 class="recommended-container__title">Recommended</h2>
-                <ul class="recommended-container__post-cards">
-                    <li *ngFor="let post of postCards">
-                        <app-post-card [post]="post"></app-post-card>
-                    </li>
-                </ul>
+            <section class="recommended">
+                <div class="margin recommended-container">
+                    <h2 class="recommended-container__title">Recommended</h2>
+                    <ul class="recommended-container__post-cards">
+                        <li *ngFor="let post of postCards">
+                            <app-post-card [post]="post"></app-post-card>
+                        </li>
+                    </ul>
+                </div>
             </section>
         </main>
 
