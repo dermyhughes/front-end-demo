@@ -6,6 +6,10 @@
         font-size: 3em;
         color: $brand-green-dark;
         padding-bottom: 0.5em;
+
+        @include respond-to("md") {
+            font-size: 2.5em;
+        }
     }
 
     p {
@@ -41,4 +45,17 @@
     display: flex;
     justify-content: space-between;
     max-width: 840px;
+
+    @include respond-to("md") {
+        flex-direction: column;
+    }
+
+    .page-stepper.left {
+        margin-right: 1em;
+
+        @include respond-to("sm") {
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+    }
 }

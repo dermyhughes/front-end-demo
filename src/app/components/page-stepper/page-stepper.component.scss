@@ -1,5 +1,12 @@
 @import "styles";
 
+.card {
+    @include respond-to("sm") {
+        width: 100% !important;
+        margin: 0;
+    }
+}
+
 .stepper-content {
     display: flex;
     height: 100%;

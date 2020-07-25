@@ -2,6 +2,10 @@
 
 .card {
     width: 350px;
+
+    @include respond-to('lg') {
+        width: 100%;
+    }
 }
 
 .post-card-link {

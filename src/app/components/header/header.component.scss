@@ -2,8 +2,6 @@
 
 .main-header,
 .secondary-header {
-    // width: 100%;
-    // @include content-margin;
 }
 
 .main-header {
@@ -93,31 +91,44 @@
             font-family: "Open Sans";
             line-height: 2;
 
-            ul > li {
-                padding: 1em 0;
-                font-size: 1.25em;
-                position: relative;
-                font-weight: 300;
-                padding-left: 0;
-                margin-right: 2em;
-
-                a {
-                    color: $text-light;
-                    text-decoration: none;
+            ul {
+                @include respond-to("md") {
+                    display: flex;
+                    flex-direction: column;
                 }
 
-                &.active {
-                    &::after {
-                        content: "";
-                        display: block;
-                        height: 4px;
-                        width: 100%;
-                        background-color: $background-blue;
-                        margin: 0.5em auto;
-                        margin-bottom: 0;
-                        position: absolute;
-                        left: 0;
-                        bottom: 0;
+                li {
+                    padding: 1em 0;
+                    font-size: 1.25em;
+                    position: relative;
+                    font-weight: 300;
+                    padding-left: 0;
+                    margin-right: 2em;
+
+                    @include respond-to("md") {
+                        line-height: 1;
+                        margin-right: 0;
+                        padding-bottom: 0.5em;
+                    }
+
+                    a {
+                        color: $text-light;
+                        text-decoration: none;
+                    }
+
+                    &.active {
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: 4px;
+                            width: 100%;
+                            background-color: $background-blue;
+                            margin: 0.5em auto;
+                            margin-bottom: 0;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                        }
                     }
                 }
             }

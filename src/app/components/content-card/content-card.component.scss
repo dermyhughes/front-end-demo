@@ -11,6 +11,10 @@
     padding-bottom: 2.5em;
     margin-left: 0;
 
+    @include respond-to('lg') {
+        width: 100%;
+    }
+
     .contents-card__top {
         position: relative;
         padding-bottom: 0.25em;
@@ -37,10 +41,19 @@
             text-indent: -1em;
             padding-left: 1em;
 
+            @include respond-to('lg') {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
             li {
                 font-family: "Open Sans";
                 padding-top: 0.25em;
                 padding-bottom: 0.25em;
+
+                @include respond-to('lg') {
+                    margin-right: 2em;
+                }
 
                 &::before {
                     content: "\ea5d";

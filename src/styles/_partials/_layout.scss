@@ -2,7 +2,7 @@
 $content-padding-left: 14vw;
 $content-padding-right: 14vw;
 
-@mixin content-margin {
+@mixin content-padding {
     padding-left: $content-padding-left;
     padding-right: $content-padding-right;
 }
@@ -10,5 +10,5 @@ $content-padding-right: 14vw;
 .margin {
     max-width: 1600px;
     margin: 0 auto;
-    @include content-margin;
+    @include content-padding;
 }

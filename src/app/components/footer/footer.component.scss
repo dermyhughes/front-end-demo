@@ -9,6 +9,14 @@
         grid-gap: 2em;
         grid-template-columns: 1fr 1fr 1fr;
 
+        @include respond-to("lg") {
+            display: flex;
+        }
+
+        @include respond-to("md") {
+            flex-wrap: wrap;
+        }
+
         .footer-cards__card {
             padding-top: 1.8em;
             padding-bottom: 1.8em;
@@ -23,6 +31,10 @@
         }
 
         .footer-cards__site-map {
+            @include respond-to("md") {
+                align-self: center;
+            }
+
             ul {
                 display: grid;
                 justify-content: space-between;
@@ -38,6 +50,10 @@
 
         .footer-cards__social-link {
             justify-self: center;
+
+            @include respond-to("md") {
+                align-self: center;
+            }
 
             .social-link {
                 height: 2em;
@@ -64,6 +80,10 @@
             border-radius: 20px;
             padding: 1.8em;
             display: block;
+
+            @include respond-to("md") {
+                width: 100%;
+            }
 
             span {
                 display: inline-block;
