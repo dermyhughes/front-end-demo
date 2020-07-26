@@ -28,12 +28,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
 
   isMobile: boolean;
   /** Inner width of window */
-  innerWidth: number;
+  innerWidth: number = window.innerWidth;
 
   /** State on mobile menu */
   isOpen: boolean = false;
 
   ngOnInit(): void {
+    
+    this.checkWidth();
 
     this.navbarItems = [
       {
@@ -57,9 +59,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    if (window.innerWidth < 1080) {
-      this.isMobile = true;
-    }
+    this.checkWidth();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -93,8 +93,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     item.active = !item.active;
   }
 
-  openMenu() {
+  openMenu(): void {
     this.isOpen = !this.isOpen;
+  }
+
+  checkWidth(): void {
+    if (window.innerWidth < 1080) {
+      this.isMobile = true;
+    }
   }
 
 }
