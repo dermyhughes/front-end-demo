@@ -11,7 +11,6 @@ export class PostCardComponent implements OnInit {
   @Input() post: PostCard;
 
   ngOnInit(): void {
-    console.log(this.post);
   }
 
 }
