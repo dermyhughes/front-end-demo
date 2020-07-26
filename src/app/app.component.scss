@@ -1,20 +1,17 @@
 @import "styles";
 
-#app-container {
-
-
-    .main-wrapper {
-
-    }
-}
-
 #main-container {
     .main-bg {
+        background-color: $background-white;
         background-image: url(../assets/bg-top.png), url(../assets/bg-bottom.png);
         // background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg); // IE wouldn't respect SVG positions
         background-repeat: no-repeat, no-repeat;
         background-position: top, bottom;
         background-size: 100% auto;
+
+        @include respond-to('md') {
+            background-size: 150vw 100vh;
+        }
 
         .main-content-container {
             position: relative;

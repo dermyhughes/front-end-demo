@@ -7,7 +7,8 @@
         <ul>
             <li *ngFor="let item of contentItems"
                 [class.active]="item.active"
-                [class.strong]="item.strong">
+                [class.strong]="item.strong"
+                (click)="setActive(item)">
                 <a href="{{ item.link }}">{{ item.title }}</a>
             </li>
         </ul>

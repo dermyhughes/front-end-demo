@@ -54,4 +54,13 @@ export class ContentCardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  setActive(item: NavbarItem) {
+    this.contentItems.map(item => {
+      if (item.active) {
+        item.active = false;
+      }
+    })
+    item.active = !item.active;
+  }
+
 }
