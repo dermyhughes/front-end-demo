@@ -9,6 +9,7 @@
 
         @include respond-to("md") {
             font-size: 2.5em;
+            line-height: 1.2;
         }
     }
 

@@ -10,10 +10,11 @@
 
 #main-container {
     .main-bg {
-        background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg);
+        background-image: url(../assets/bg-top.png), url(../assets/bg-bottom.png);
+        // background-image: url(../assets/bg-top.svg), url(../assets/bg-bottom.svg); // IE wouldn't respect SVG positions
         background-repeat: no-repeat, no-repeat;
         background-position: top, bottom;
-        background-size: 100%;
+        background-size: 100% auto;
 
         .main-content-container {
             position: relative;
@@ -30,6 +31,7 @@
 
                 .section-left {
                     margin-right: 3em;
+                    height: 100%; // IE fallback
                     height: -webkit-fit-content;
                     height: -moz-fit-content;
                     height: fit-content;

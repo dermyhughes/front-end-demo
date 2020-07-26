@@ -1,8 +1,9 @@
 @import "styles";
 
 @mixin stripes {
-    // background-color: #375861;
-    background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctitle%3Estripe%3C/title%3E%3Cpath d='M47.69,35.13l40-40h-20l-20,20m40,20v-20l-20,20' transform='translate(-47.69 4.88)'/%3E%3C/svg%3E");
+    // IE doesn't like SVGs so I had to use a png
+    // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctitle%3E stripe%3C/title%3E%3Cpath d='M-1 1l2-2M0 4l4-4M3 5l2-2' stroke='black'/%3E%3C/svg%3E");
+    background-image: url('../../../assets/stripe_2.png');
     background-size: .5em;
     opacity: 0.6;
 }
@@ -44,6 +45,7 @@
             @include respond-to('lg') {
                 display: flex;
                 flex-wrap: wrap;
+                justify-content: space-between;
             }
 
             li {
