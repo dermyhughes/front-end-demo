@@ -93,7 +93,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     item.active = !item.active;
   }
 
-  openMenu(): void {
+  toggleMenu(): void {
     this.isOpen = !this.isOpen;
   }
 
