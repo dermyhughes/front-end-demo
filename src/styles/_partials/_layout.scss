@@ -1,10 +1,17 @@
 // Main Spacing
 $content-padding-left: 14vw;
 $content-padding-right: 14vw;
+$mobile-content-padding-left: 8vw;
+$mobile-content-padding-right: 8vw;
 
 @mixin content-padding {
     padding-left: $content-padding-left;
     padding-right: $content-padding-right;
+
+    @include respond-to("sm") {
+        padding-left: $mobile-content-padding-left;
+        padding-right: $mobile-content-padding-right;
+    }
 }
 
 .margin {
