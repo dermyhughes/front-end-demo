@@ -60,7 +60,6 @@
 
                         &.active::after {
                             width: 80%;
-                            height: 8px;
                             margin-bottom: 0.2em;
                         }
                     }
@@ -109,6 +108,7 @@
         position: relative;
         z-index: 9999;
         margin-left: 1em;
+        cursor: pointer;
 
         .icon {
             color: $text-light;
