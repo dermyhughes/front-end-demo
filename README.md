@@ -1,4 +1,6 @@
-# Made to Engage Technical Challenge
+# Front End Technical Challenge
+
+_Context: This was originally created for a take home technical test that never got reviewed. I actually haven't touched Angular much since this, having moved mostly to React, but I still think I did a decent job.  It's been nearly 2 years since I created, and the original invite for the review is still pending so I think the chances of it going much further are pretty slim! So rather than sitting privately on my Github, I thought I might as well make it public.
 
 Hi! 
 
@@ -30,8 +32,6 @@ Dermot
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 You'll need Angular installed to run this. `npm install -g @angular/cli`
-
-A live version of this can be found at: [https://dermot-made-to-engage.netlify.app/](https://dermot-made-to-engage.netlify.app/).
 
 ## Development server
 
